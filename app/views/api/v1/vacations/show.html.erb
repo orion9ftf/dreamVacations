@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Employee name:</strong>
+  <%= @vacation.employee_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @vacation.email %>
+</p>
+
+<p>
+  <strong>Leader:</strong>
+  <%= @vacation.leader %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @vacation.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @vacation.end_date %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @vacation.type %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @vacation.reason %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @vacation.state %>
+</p>
+
+<%= link_to 'Edit', edit_vacation_path(@vacation) %> |
+<%= link_to 'Back', vacations_path %>
