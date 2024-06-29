@@ -141,3 +141,8 @@ Muestra un formulario para cargar el archivo.
 Muestra los datos del archivo cargado si @data está presente.
 
 
+
+
+<img width="485" alt="json-format" src="https://github.com/orion9ftf/dreamVacations/assets/104280123/a550a97c-6cd4-468a-808a-34855a8840fb">
+
+
