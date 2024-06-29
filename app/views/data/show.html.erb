@@ -1,0 +1,19 @@
+<h1>Datum</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @datum.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @datum.age %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @datum.email %>
+</p>
+
+<%= link_to 'Edit', edit_datum_path(@datum) %> |
+<%= link_to 'Back', data_index_path %>

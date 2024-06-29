@@ -1,13 +1,10 @@
 <h1>Upload File</h1>
 
-
-
-<%= form_with url: api_v1_vacations_path, local: true, method: :post, multipart: true do |form| %>
+<%= form_with url: files_path, local: true, method: :post, multipart: true do |form| %>
   <div class="field">
     <%= form.label :file %>
     <%= form.file_field :file %>
   </div>
-
 
   <div class="actions">
     <%= form.submit 'Upload' %>
@@ -36,7 +33,5 @@
   </table>
 <% end %>
 
-<%#= render 'import' %>
+<%= link_to 'Back', new_file_path %>
 
-<%#= link_to 'Back', new_api_v1_vacation_path %>
-<%#= link_to 'ver más', api_v1_vacations_path %>
