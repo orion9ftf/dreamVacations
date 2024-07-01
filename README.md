@@ -134,3 +134,65 @@ Implementar todas las mejores prácticas de seguridad puede ser complejo y requi
 
 Implementar un proceso seguro de ciberseguridad en una aplicación Ruby on Rails es crucial para proteger contra amenazas y vulnerabilidades. Aunque hay algunas desventajas, las ventajas de usar Rails, junto con las prácticas de seguridad adecuadas, proporcionan una base sólida para desarrollar aplicaciones seguras. Mantenerse informado y proactivo en la actualización y configuración de seguridad es esencial para mantener la integridad y seguridad de la aplicación. El proceso de seguridad es primordial en cualquier aplicativo, ya que en variadas ocasiones manejamos datos sencibles de las/los usuarios.
 
+
+## Segunda parte:
+
+Archivo `vacations.py``
+
+Prerrequisitos
+
+Configuración de Google Cloud y API de Google Sheets:
+
+* Crear un proyecto en Google Cloud Console.
+* Habilita la API de Google Sheets.
+* Crear credenciales de servicio (Service Account) y descarga el archivo JSON de claves.
+
+Instalación de dependencias:
+
+Usa `pip` para instalar las bibliotecas necesarias:
+
+```sh
+pip install gspread google-auth
+```
+
+Implementación:
+
+ver código
+
+
+### Tests:
+
+Usar `unittest` para crear pruebas unitarias e integrales.
+
+code:
+```py
+import unittest
+
+class TestGoogleSheetsAPI(unittest.TestCase):
+    def setUp(self):
+        self.spreadsheet_id = 'tu_spreadsheet_id'
+        self.sheet_name = 'nombre_de_tu_hoja'
+    
+    def test_consultar_hoja(self):
+        datos = consultar_hoja(self.spreadsheet_id, self.sheet_name)
+        self.assertIsInstance(datos, list)
+
+    def test_modificar_celda(self):
+        modificar_celda(self.spreadsheet_id, self.sheet_name, 'A1', 'Test')
+        datos = consultar_hoja(self.spreadsheet_id, self.sheet_name)
+        self.assertEqual(datos[0]['Columna1'], 'Test')
+
+    def test_ingresar_datos(self):
+        ingresar_datos(self.spreadsheet_id, self.sheet_name, ['Test1', 'Test2'])
+        datos = consultar_hoja(self.spreadsheet_id, self.sheet_name)
+        self.assertIn(['Test1', 'Test2'], datos)
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+
+* Archivo de Credenciales: Guarda el archivo JSON de credenciales en un lugar seguro y actualiza la ruta en el código.
+* ID de la Hoja de Cálculo: Puedes obtenerlo de la URL de tu Google Sheet.
+* Pruebas: Ejecuta las pruebas con python3 `vacations.py`.
+
