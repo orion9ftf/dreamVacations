@@ -196,3 +196,6 @@ if __name__ == '__main__':
 * ID de la Hoja de Cálculo: Puedes obtenerlo de la URL de tu Google Sheet.
 * Pruebas: Ejecuta las pruebas con python3 `vacations.py`.
 
+
+## Falta ~> devise para Ruby on Rails, JWT para React, y que se vean los datos bonitos en React :)
+
