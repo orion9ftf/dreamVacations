@@ -1,26 +1,7 @@
 <h1>Editing Vacation</h1>
 
-<%#= render 'form', vacation: @vacation %>
+<%= render 'form', vacation: @vacation %>
 
-<%#= link_to 'Show', @vacation %>
-<%#= link_to 'Back', vacations_path %>
-
-<%= form_with model: @datum, url: file_path(@datum), local: true do |form| %>
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-  <div class="field">
-    <%= form.label :age %>
-    <%= form.number_field :age %>
-  </div>
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-  <div class="actions">
-    <%= form.submit 'Update' %>
-  </div>
-<% end %>
-
+<%= link_to 'Show', @vacation %>
+<%= link_to 'Back', vacations_path %>
 <%= link_to 'Back', files_path %>

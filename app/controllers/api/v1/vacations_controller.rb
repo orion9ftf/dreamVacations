@@ -27,6 +27,7 @@ class Api::V1::VacationsController < ApplicationController
 
   def index
     @vacations = Vacation.all
+    render json: @vacations
     #vacations = Vacation.ransack(params[:q]).result.page(params[:page])
     #render json: vacations, status: :ok
   end
