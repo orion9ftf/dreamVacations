@@ -1,6 +1,7 @@
 class Api::V1::VacationsController < ApplicationController
   before_action :set_vacation, only: %i[ show edit update destroy ]
   # before_action :authenticate_user!
+  http_basic_authenticate_with name: "tunombre", password: "laclaveesinsegura"
  
   def index
     @vacations = Vacation.all
