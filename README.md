@@ -45,6 +45,12 @@ Ver información en formato JSON:
 
 Link: http://localhost:3000/
 
+Autenticación básica a nivel de revisión de JSON
+
+```rb
+  http_basic_authenticate_with name: "tunombre", password: "laclaveesinsegura"
+```
+
 
 ### Proceso Seguro de Ciberseguridad en Ruby on Rails
 
